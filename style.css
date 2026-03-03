@@ -1,0 +1,144 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY COMO GRID PRINCIPAL */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+    color: #e0e0e0;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* ASIDE - MENÚ LATERAL */
+aside {
+    background: #0c0c17;
+    padding: 30px 20px;
+    border-right: 1px solid rgba(0, 255, 255, 0.2);
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+aside h2 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #b0f7ff;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+    display: block;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: rgba(0, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    color: #00ffff;
+}
+
+/* MAIN COMO GRID INTERNO */
+main {
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* HEADER OCUPA LAS 2 COLUMNAS */
+header {
+    grid-column: span 2;
+}
+
+/* FOOTER OCUPA LAS 2 COLUMNAS */
+footer {
+    grid-column: span 2;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* TARJETAS */
+header, section, footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO HOVER */
+header:hover, section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+/* TÍTULOS */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+h2 {
+    color: #00bcd4;
+    margin-bottom: 12px;
+    border-left: 4px solid #00ffff;
+    padding-left: 10px;
+}
+
+/* TEXTO */
+p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* PROPÓSITO DESTACADO */
+#proposito strong {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
