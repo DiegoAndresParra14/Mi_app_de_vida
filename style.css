@@ -142,3 +142,18 @@ li {
 html {
     scroll-behavior: smooth;
 }
+
+/* Mantiene legibles la navegación y las tarjetas en pantallas pequeñas. */
+@media (max-width: 800px) {
+    body { grid-template-columns: minmax(0, 1fr); }
+    aside { position: static; height: auto; border-right: 0; }
+    main { min-width: 0; grid-template-columns: minmax(0, 1fr); padding: 16px; }
+    header, footer { grid-column: 1; }
+    header, section, footer { min-width: 0; padding: 20px; }
+    h1 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    header, section, footer { transition: none; }
+    header:hover, section:hover { transform: none; }
+}
